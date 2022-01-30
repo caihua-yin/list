@@ -39,7 +39,7 @@ build/liblist.so.$(MAJOR_VERSION).$(MINOR_VERSION).$(PATCH_VERSION): $(OBJS)
 	@mkdir -p build
 	# use gcc instead of ld to make it work on mac os
 	#ld -z now -shared -lc -soname `basename $@` src/*.o -o $@
-	$(CC) -shared src/*.o -o shared/$@
+	$(CC) -shared src/*.o -o $@
 	# comment strip to make it work on mac os
 	#strip --strip-unneeded --remove-section=.comment --remove-section=.note $@
 
